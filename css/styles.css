@@ -1,0 +1,157 @@
+/* Element Definition */
+a {
+  color: #45b29a;
+  font-family: 'Merriweather', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+body {
+  margin: 0px;
+  text-align: center;
+  font-family: 'Merriweather', sans-serif;
+  color: #40514E;
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  font-size: 5.625rem;
+  color: #45b29a;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #45b29a;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #45b29a;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+p {
+  line-height: 2;
+}
+
+.favicon {
+  width: 20%;
+  border-radius: 50%;
+}
+
+
+
+/* Class Definition */
+.bottomCloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+  width: 18%;
+}
+
+.bottomContainer {
+  background-color: #c5ded7;
+  color: #45b29a;
+  padding: 50px 0 10px;
+}
+
+.contactMe {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0px;
+}
+
+.middleContainer {
+  margin 100px 0;
+}
+
+.profile {
+  width: 50%;
+  margin: 100px auto 100px auto;
+}
+
+.skillRow {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+}
+
+.topContainer {
+  background-color: #e0ebe8;
+  position: relative;
+  padding-top: 100px;
+}
+
+.topCloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+  width: 8%;
+}
+
+.btn {
+  background: #45b29a;
+  background-image: -webkit-linear-gradient(top, #45b29a, #11999e);
+  background-image: -moz-linear-gradient(top, #45b29a, #11999e);
+  background-image: -ms-linear-gradient(top, #45b29a, #11999e);
+  background-image: -o-linear-gradient(top, #45b29a, #11999e);
+  background-image: linear-gradient(to bottom, #45b29a, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+/* ID Definition */
+#bio-intro {
+  background-color: #e0ebe8;
+}
+
+#furnitureDesign {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+#planImage {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+#profilePicture {
+  border-radius: 50%;
+}
