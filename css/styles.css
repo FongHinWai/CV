@@ -1,15 +1,4 @@
 /* Element Definition */
-a {
-  color: #45b29a;
-  font-family: 'Merriweather', sans-serif;
-  margin: 10px 20px;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #EAF6F6;
-}
-
 body {
   margin: 0px;
   text-align: center;
@@ -32,22 +21,7 @@ h2 {
   padding-bottom: 10px;
 }
 
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: #45b29a;
-}
-
-h4 {
-  font-family: 'Montserrat', sans-serif;
-  color: #45b29a;
-}
-
-h5 {
-  font-family: 'Montserrat', sans-serif;
-  color: #45b29a;
-}
-
-h5 {
+h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   color: #45b29a;
 }
@@ -63,88 +37,19 @@ p {
   line-height: 2;
 }
 
-strong {
-
+.container-fluid {
+  padding: 0;
 }
 
-.favicon {
+/* section welcome-view */
+#welcome-view {
+  background-color: #e0ebe8;
+  padding: 0;
+}
+
+.navbar-logo {
   width: 20%;
   border-radius: 50%;
-}
-
-
-
-/* Class Definition */
-.bottomCloud {
-  position: absolute;
-  left: 250px;
-  bottom: 300px;
-  width: 18%;
-}
-
-.bottomContainer {
-  background-color: #c5ded7;
-  color: #45b29a;
-  padding: 50px 0 10px;
-}
-
-.contact-me {
-  width: 40%;
-  margin: 40px auto 60px;
-}
-
-.copyright {
-  color: #EAF6F6;
-  font-size: 0.75rem;
-  padding: 20px 0px;
-}
-
-.no-side-margin {
-  margin 100px 0;
-}
-
-.profile {
-  width: 50%;
-  margin: 100px auto 100px auto;
-}
-
-.design-portfolio-list-item {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-}
-
-.skill-list-title {
-  text-align: left;
-}
-
-.skill-list {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-}
-
-.skill-item {
-  display: inline-block;
-  padding: 0 10px;
-  width: 260px;
-  margin: 10px;
-}
-
-.skill-item2 {
-  display: inline-block;
-  padding: 0 10px;
-  width: 260px;
-  margin: 10px;
-  border: solid #45b29a;
-  text-align: center;
-}
-
-.skill-icon {
-  width: 15%;
-  border-radius: 20%;
-  padding: 0;
-  border: 0;
 }
 
 .top-background {
@@ -153,14 +58,149 @@ strong {
   padding-top: 100px;
 }
 
-.topCloud {
+.top-cloud-img {
   position: absolute;
   right: 300px;
   top: 40px;
   width: 8%;
 }
 
-.btn {
+.bottom-cloud-img {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+  width: 18%;
+}
+
+/* section bio-intro */
+#bio-intro {
+  width: 50%;
+  margin: 100px auto 100px auto;
+}
+
+.profile-picture {
+  border-radius: 50%;
+}
+
+/* section skills */
+#skills {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.skill-list-title {
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.skill-list-software-proficiency {
+  margin: 0 0 50px;
+}
+
+.skill-key-skill {
+  border: solid #45b29a;
+  text-align: center;
+}
+
+.software-proficiency-icon {
+  width: 30%;
+  border-radius: 20%;
+  padding: 0;
+  border: 0;
+}
+
+/* design-portfolio */
+#design-portfolio {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.blog .carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -40px;
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
+
+.blog .carousel-indicators .active {
+  background: #707070;
+}
+
+/* work-experience */
+#work-experience {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.work-experience-column {
+  text-align: justify;
+  padding: 20px;
+}
+
+/* education */
+#education {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.education-timeline {
+  margin: 0 auto;
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  text-align: left;
+}
+
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+
+ul.timeline>li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+ul.timeline>li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #45b29a;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+.timeline-heading, .timeline-date {
+  display: inline-block;
+}
+
+/* contact-me */
+#contact-me {
+  width: 75%;
+  margin: 0 auto 100px;
+}
+
+.contact-me-button {
+  margin: 10px 20px;
   background: #45b29a;
   background-image: -webkit-linear-gradient(top, #45b29a, #11999e);
   background-image: -moz-linear-gradient(top, #45b29a, #11999e);
@@ -177,7 +217,7 @@ strong {
   text-decoration: none;
 }
 
-.btn:hover {
+.contact-me-button:hover {
   background: #30e3cb;
   background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
   background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
@@ -187,49 +227,49 @@ strong {
   text-decoration: none;
 }
 
-.education-table {
-  width: 50%;
-  margin: 0 auto 0 auto;
-  text-align: left;
+/* footer */
+#footer {
+  background-color: #c5ded7;
+  padding: 50px 0 10px;
 }
 
-.education-item {
-  height: 100px;
+.footer-link {
+  margin: 0px 10px;
+  color: #45b29a;
 }
 
-.work-exp-tables {
-  width: 70%;
-  text-align: center;
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0px;
 }
 
-.work-exp-table {
-  width: 400px;
-  margin: 20px auto 20px auto;
-  text-align: left;
-  line-height: 2;
-}
+@media (max-width: 1028px) {
+  .top-background-img {
+    width: 100%;
+  }
 
-.work-exp-item {
-  padding-right: 30px;
-}
+  #bio-intro {
+    width: 90%;
+  }
 
-/* ID Definition */
-#welcome-view {
-  background-color: #e0ebe8;
-}
+  #skills {
+    width: 90%;
+  }
 
-#furnitureDesign {
-  width: 25%;
-  float: right;
-  margin-left: 30px;
-}
+  #design-portfolio {
+    width: 90%;
+  }
 
-#planImage {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
-}
+  #work-experience {
+    width: 90%;
+  }
 
-#profilePicture {
-  border-radius: 50%;
+  #education {
+    width: 90%;
+  }
+
+  #contact-me {
+    width: 90%;
+  }
 }
