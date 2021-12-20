@@ -10,12 +10,12 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -24,21 +24,33 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/5ca306b7cb.js" crossorigin="anonymous"></script>
+
+  <!-- javascript files -->
+  <script src="js/parallax.js" type="text/javascript"></script>
+  <script src="js/designPortfolio.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <section id="welcome-view">
+  <section id="page-header">
     <div class="container-fluid">
       <!-- Nav Bar -->
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href=""><img class="navbar-logo" src="images/favicon.png" alt="navbar logo"></a>
+
+        <a class="navbar-brand" href="">
+          <img class="navbar-logo-img" src="images/favicon.png" alt="navbar logo img">
+          <div class="navbar-logo-text">
+            <span class="navbar-logo-name">Hin Wai </span>
+            <span class="navbar-logo-surname">Fong</span>
+          </div>
+        </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#design-portfolio">Design Portfolio</a>
@@ -52,30 +64,45 @@
           </ul>
         </div>
       </nav>
-      <div class="top-background">
-        <img class="top-cloud-img" src="images/cloud 2.png" alt="cloud image">
-        <h1>I'm Hin Wai.</h1>
-        <h2>a designer.</h2>
-        <img class="bottom-cloud-img" src="images/cloud 1.png" alt="cloud image">
-        <img class="top-background-img" src="images/mountain.png" alt="mountain image">
+      <div class="bio-intro row">
+        <div class="col-sm-12 col-md-5 col-lg-5">
+          <div class="profile-picture-frame">
+            <img src="images/profile.jpeg" class="profile-picture" data-speed="2" alt="profile image">
+          </div>
+        </div>
+        <div class="bio-intro-text col-sm-12 col-md-7 col-lg-7">
+          <div id="bio-intro-text-roles" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="2000">
+                <h4>Furniture Designer</h4>
+              </div>
+              <div class="carousel-item" data-interval="2000">
+                <h4>3D Designer</h4>
+              </div>
+              <div class="carousel-item" data-interval="2000">
+                <h4>Jewellery Designer</h4>
+              </div>
+              <div class="carousel-item" data-interval="2000">
+                <h4>UI / UX Designer</h4>
+              </div>
+            </div>
+          </div>
+          <h1>Hin Wai Fong</h1>
+          <p>I'm a designer based in Singapore, majoring in Product Design from NTU School of Art, Design, and Media. I have a passion for interior design and love to design furnitures.</p>
+          <div class="bio-intro-buttons">
+            <a href="" target="_blank" class="btn btn-primary">Download CV</a>
+            <a href="" target="_self" class="btn btn-secondary">Contact</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="bio-intro">
-    <div class="container-fluid">
-      <img class="profile-picture" src="images/profile.jpeg" alt="Profile Picture">
-      <h2>Hello.</h2>
-      <p>I'm a designer based in Singapore, majoring in Product Design from NTU School of Art, Design, and Media. I have a passion for interior design and love to design furnitures.</p>
-    </div>
-  </section>
-  <hr>
-
   <section id="skills">
     <div class="container-fluid">
-      <h2>My Skills.</h2>
+      <h2>My Skills</h2>
 
-      <h3 class="skill-list-title">Software Proficiency:</h3>
+      <h4>Software Proficiency:</h4>
       <div class="skill-list-software-proficiency row">
         <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
           <img class="software-proficiency-icon" src="images/skill tool logo/Adobe Premiere Pro.png" alt="Adobe Premiere Pro logo">
@@ -111,184 +138,220 @@
         </div>
       </div>
 
-      <h3 class="skill-list-title">Key Skills:</h3>
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">UI Design</p>
+      <h4>Key Skills:</h4>
+      <div class="key-skill-list row">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-bullseye fa-2x"></i>
+            <h4>UI Design</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Experience & Spatial Design</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-bullseye"></i>
+            <h4>Experience & Spatial Design</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">CAD Modelling & 3D Printing</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-cube fa-2x"></i>
+            <h4>CAD Modelling & 3D Printing</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Jewellery Design</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-ring fa-2x"></i>
+            <h4>Jewellery Design</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Furniture Construction</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-chair fa-2x"></i>
+            <h4>Furniture Construction</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Garment Construction</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-layer-group fa-2x"></i>
+            <h4>Surface Design</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Surface Design</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-bullseye"></i>
+            <h4>Laser Cut</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Laser Cut</p>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Wood Working</p>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Silkscreen</p>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Printmaking</p>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-          <p class="skill-key-skill">Photography</p>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="key-skill-item grey-default">
+            <i class="fa fa-tree fa-2x"></i>
+            <h4>Wood Working</h4>
+            <p>
+              Description...
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <hr>
 
   <section id="design-portfolio">
     <div class="container-fluid">
-      <a class="nav-link" href="https://www.dropbox.com/sh/kqml9d49ybxmums/AABxV78TzFdLTESN0XPBiNg0a?dl=0&preview=General+design+portfolio.pdf">
-        <h2>Design Portfolio</h2>
-      </a>
-      <div class="row blog">
-        <div class="col-md-12">
-          <div id="blogCarousel" class="carousel slide" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-              <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#blogCarousel" data-slide-to="1"></li>
-            </ol>
-
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                </div>
-                <!--.row-->
-              </div>
-              <!--.item-->
-
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                  <div class="col-md-3">
-                    <a href="#">
-                      <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
-                    </a>
-                  </div>
-                </div>
-                <!--.row-->
-              </div>
-              <!--.item-->
-
-            </div>
-            <!--.carousel-inner-->
+      <div class="row section-separator">
+        <div class="section-title col-sm-12">
+          <h2>Recent Portfolio</h2>
+        </div>
+        <div class="part col-sm-12">
+          <div class="portfolio-nav col-sm-12" id="filter-button">
+            <ul>
+              <li data-filter="*"><span>All Categories</span></li>
+              <li data-filter=".user-interface"><span>Product Design</span></li>
+              <li data-filter=".branding"><span>Visual Communication</span></li>
+            </ul>
           </div>
-          <!--.Carousel-->
-
+          <div class="mh-project-gallery col-sm-12" id="project-gallery">
+            <div class="portfolioContainer row">
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                <figure>
+                  <img src="images/Design Portfolio/Biomimicry I Woodworking Application.png" alt="Biomimicry I Woodworking Application Image">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Product Design</h5>
+                    <span class="sub-title">Biomimicry I Woodworking Application</span>
+                    <a data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">
+                <figure>
+                  <img src="images/Design Portfolio/Typography I Type Applications a.png" alt="Typography I Type Applications Image">
+                  <figcaption class="fig-caption">
+                    <i class="fa fa-search"></i>
+                    <h5 class="title">Visual Communication</h5>
+                    <span class="sub-title">Typography I Type Applications</span>
+                    <a href="assets/images/portfolio/g2.png" data-fancybox data-src="#mh"></a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="mh-portfolio-modal" id="mh" style="display: none;">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-5">
+            <h2>Wrap - A campanion plugin</h2>
+            <p>Wrap is a clean and elegant Multipurpose Landing Page Template.
+              It will fit perfectly for Startup, Web App or any type of Web Services.
+              It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme.
+              All variations are organized separately so you can use / customize the template very easily.</p>
+
+            <p>It is a clean and elegant Multipurpose Landing Page Template.
+              It will fit perfectly for Startup, Web App or any type of Web Services.
+              It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme.
+              All variations are organized separately so you can use / customize the template very easily.</p>
+            <div class="mh-about-tag">
+              <ul>
+                <li><span>php</span></li>
+                <li><span>html</span></li>
+                <li><span>css</span></li>
+                <li><span>php</span></li>
+                <li><span>wordpress</span></li>
+                <li><span>React</span></li>
+                <li><span>Javascript</span></li>
+              </ul>
+            </div>
+            <a href="" class="btn btn-fill">Live Demo</a>
+          </div>
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="assets/images/pr-0.jif" alt="" class="img-fluid">
+              <p>All variations are organized separately so you can use / customize the template very easily.</p>
+              <img src="assets/images/pr-1.jif" alt="" class="img-fluid">
+              <p>All variations are organized separately so you can use / customize the template very easily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <hr>
+
   <section id="work-experience">
     <div class="container-fluid">
       <h2>Work Experience</h2>
       <div class="work-experience-column-table row">
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>3H Decor Pte / Product Designer</h5>
+          <h4>3H Decor Pte / Product Designer</h4>
           <p>Feb 2021 - present.</p>
           <p>Designing built furniture, generating renders and details drawings for clients and carpenters to review and work on. Research and source for materials / fittings for built furniture. Site visit and liasing with clients.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Inginim Pte Ltd / Freelance Designer</h5>
-          <p>Nov 2020 - Present</p>
-          <p>Design UI for websites and mobile apps.</p>
+          <h4>Inginim Pte Ltd / Freelance Designer</h4>
+          <p>Nov 2020 - Feb 2021</p>
+          <p>Design UI for websites and mobile apps. Liasing with clients and developers on user interface requirements and wireframes.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Inginim Pte Ltd / UX Designer</h5>
+          <h4>Inginim Pte Ltd / UX Designer</h4>
           <p>Sep 2018 - Sep 2020</p>
           <p>Create wireframes, design UI for websites and mobile apps. Conduct requirements gathering sessions and writing of test case scenarios.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Hydse Pte Ltd / Junior Exhibition Designer</h5>
+          <h4>Hydse Pte Ltd / Junior Exhibition Designer</h4>
           <p>Jul 2018 - Sep 2018</p>
           <p>Design events and exhibitions visuals. Spatial planning of events and exhibitions.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Institute on Asian Consumer Insight / Freelance designer</h5>
+          <h4>Institute on Asian Consumer Insight / Freelance designer</h4>
           <p>Dec 2017 - Apr 2018</p>
           <p>Design report layout for publishing.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Systmz Pte Ltd / Product Design Intern</h5>
+          <h4>Systmz Pte Ltd / Product Design Intern</h4>
           <p>May 2017 - Aug 2017</p>
           <p>CAD models, prototyping, produce technical drawings for production, research and present design concepts to clients.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Cyberland International Pte Ltd / Assistant Instructor</h5>
+          <h4>Cyberland International Pte Ltd / Assistant Instructor</h4>
           <p>Jun 2016 - Aug 2016</p>
           <p>Conduct LEGO robotics workshop for primary school students.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Earth Observatory Singapore / Game Tester (Project Basis)</h5>
+          <h4>Earth Observatory Singapore / Game Tester (Project Basis)</h4>
           <p>Sep 2015 - Oct 2015, Mar 2016</p>
           <p>Testing of EARTH GIRL 2 in both iOS and Android versions to identify glitches and bugs.</p>
         </div>
         <div class="work-experience-column col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h5>Straits Construction Co Pte Ltd / Admin Assistant</h5>
+          <h4>Straits Construction Co Pte Ltd / Admin Assistant</h4>
           <p>Jan 2014 - May 2014, Dec 2014</p>
           <p>Picking up calls from vendors and subcontractors, data entry, printing and filing of documents.</p>
         </div>
       </div>
     </div>
   </section>
-  <hr>
 
   <section id="education">
     <div class="container-fluid mt-5 mb-5">
@@ -297,22 +360,22 @@
         <div class="education-timeline col-md-12 offset-md-3">
           <ul class="timeline">
             <li>
-              <h5 class="timeline-heading">Nanyang Technological University, School of Art Design and Media</h5>
+              <h4 class="timeline-heading">Nanyang Technological University, School of Art Design and Media</h4>
               <p class="timeline-date float-right">2014 - 2018</p>
               <p>Bachelor of Fine Arts in Product Design</p>
             </li>
             <li>
-              <h5 class="timeline-heading">Columbia College Chicago</h5>
+              <h4 class="timeline-heading">Columbia College Chicago</h4>
               <p class="timeline-date float-right">Aug 2016 - Dec 2016</p>
               <p>Semester-long Exchange</p>
             </li>
             <li>
-              <h5 class="timeline-heading">Anglo Chinese Junior College (ACJC)</h5>
+              <h4 class="timeline-heading">Anglo Chinese Junior College (ACJC)</h4>
               <p class="timeline-date float-right">2012 - 2013</p>
               <p>GCE A-level</p>
             </li>
             <li>
-              <h5 class="timeline-heading">Jurong Secondary School</h5>
+              <h4 class="timeline-heading">Jurong Secondary School</h4>
               <p class="timeline-date float-right">2008 - 2011</p>
               <p>GCE O-level</p>
             </li>
@@ -321,24 +384,20 @@
       </div>
     </div>
   </section>
-  <hr>
 
-  <section id="contact-me">
+  <section id="page-footer">
     <div class="container-fluid">
-      <h2>I can help.</h2>
-      <h3>I'm currently available for freelance work.</h3>
-      <p>If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.</p>
-      <br />
-      <a class="contact-me-button btn" href="mailto:fonghinwai@gmail.com">EMAIL ME</a>
-    </div>
-  </section>
-
-  <section id="footer">
-    <div class="container-fluid">
-      <a class="footer-link" href="https://sg.linkedin.com/in/fonghinwai"><i class="fab fa-linkedin fa-2x"></i></a>
-      <a class="footer-link" href="https://www.dropbox.com/sh/kqml9d49ybxmums/AABxV78TzFdLTESN0XPBiNg0a?dl=0"><i class="fab fa-dropbox fa-2x"></i></a>
-      <a class="footer-link" href="tel:+65-9686-1153"><i class="fas fa-phone-square fa-2x"></i></a>
-      <p class="copyright">© 2021 Hin Wai Fong. All rights reserved.</p>
+      <div class="footer-link-list">
+        <ul class="footer-links">
+          <li><a class="footer-link" href="https://sg.linkedin.com/in/fonghinwai">Linkedin</a></li>
+          <li><a class="footer-link" href="https://www.dropbox.com/sh/kqml9d49ybxmums/AABxV78TzFdLTESN0XPBiNg0a?dl=0">Dropbox</a></li>
+          <li><a class="footer-link" href="tel:+65-9686-1153">Phone</a></li>
+          <li><a class="" href="mailto:fonghinwai@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2021 Hin Wai Fong. All rights reserved.</p>
+      </div>
     </div>
   </section>
 
