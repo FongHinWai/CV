@@ -227,6 +227,7 @@ p {
   position: relative;
   text-align: left;
   width: 100%;
+  height: 90%;
   display: block;
   margin: 0 0 15px;
   background: #fff;
@@ -247,11 +248,24 @@ p {
   color: #45b29a;
 }
 
-.software-proficiency-icon {
-  width: 30%;
-  border-radius: 20%;
+.software-proficiency-list {
+  margin-left: 5%;
+}
+
+.software-proficiency-item {
   padding: 0;
-  border: 0;
+  text-align: left;
+}
+
+.software-proficiency-item img {
+  height: 40px;
+  width: auto;
+  border-radius: 20%;
+  margin: 10px 10px 10px 0;
+}
+
+.software-proficiency-item p {
+  display: inline-block;
 }
 
 /* design-portfolio */
@@ -626,6 +640,15 @@ ul.timeline>li:before {
 
 .timeline-heading, .timeline-date {
   display: inline-block;
+  margin: 0 auto;
+}
+
+.timeline li {
+  padding: 2% 15%;
+}
+
+.timeline li p {
+  margin: 0;
 }
 
 /* footer */
