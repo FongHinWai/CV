@@ -8,6 +8,7 @@
   <!-- CSS stylesheets -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -21,13 +22,22 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/5ca306b7cb.js" crossorigin="anonymous"></script>
 
+
   <!-- javascript files -->
   <script src="js/parallax.js" type="text/javascript"></script>
-  <script src="js/designPortfolio.js" type="text/javascript"></script>
+  <script src="js/jquery.mixitup.min.js"></script>
+  <script src="js/isotope.pkgd.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.nav.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/custom-scripts.js"></script>
 </head>
 
 <body>
@@ -219,85 +229,571 @@
   <section id="design-portfolio">
     <div class="container-fluid">
       <div class="row section-separator">
-        <div class="section-title col-sm-12">
+        <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
           <h2>Recent Portfolio</h2>
         </div>
         <div class="part col-sm-12">
           <div class="portfolio-nav col-sm-12" id="filter-button">
             <ul>
-              <li data-filter="*"><span>All Categories</span></li>
-              <li data-filter=".user-interface"><span>Product Design</span></li>
-              <li data-filter=".branding"><span>Visual Communication</span></li>
+              <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
+              <li data-filter=".product-design" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Product Design</span></li>
+              <li data-filter=".interior-design" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Interior Design</span></li>
+              <li data-filter=".visual-communication" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Visual Communication</span></li>
+              <li data-filter=".UI/UX-design" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>UI/UX Design</span></li>
             </ul>
           </div>
-          <div class="mh-project-gallery col-sm-12" id="project-gallery">
+          <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
             <div class="portfolioContainer row">
-              <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+              <!-- Design Portfolio for Interior Design -->
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 interior-design">
                 <figure>
-                  <img src="images/Design Portfolio/Biomimicry I Woodworking Application.png" alt="Biomimicry I Woodworking Application Image">
+                  <img src="images/Design Portfolio/Interior Design/Reception Counter/BF01 Reception Counter Perspective Front.jpg" alt="Reception Counter Design Image">
                   <figcaption class="fig-caption">
-                    <i class="fa fa-search"></i>
-                    <h5 class="title">Product Design</h5>
-                    <span class="sub-title">Biomimicry I Woodworking Application</span>
-                    <a data-fancybox data-src="#mh"></a>
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Reception Counter</h4>
+                    <p class="sub-title">Interior Design</p>
+                    <a data-fancybox data-src="#reception-counter"></a>
                   </figcaption>
                 </figure>
               </div>
-              <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 interior-design">
                 <figure>
-                  <img src="images/Design Portfolio/Typography I Type Applications a.png" alt="Typography I Type Applications Image">
+                  <img src="images/Design Portfolio/Interior Design/The Hidden Door/Bookshelf door.gif" alt="The Hidden Door Design Image">
                   <figcaption class="fig-caption">
-                    <i class="fa fa-search"></i>
-                    <h5 class="title">Visual Communication</h5>
-                    <span class="sub-title">Typography I Type Applications</span>
-                    <a href="assets/images/portfolio/g2.png" data-fancybox data-src="#mh"></a>
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">The Hidden Door</h4>
+                    <p class="sub-title">Interior Design</p>
+                    <a data-fancybox data-src="#the-hidden-door"></a>
                   </figcaption>
                 </figure>
               </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 interior-design">
+                <figure>
+                  <img src="images/Design Portfolio/Interior Design/Seating Pod/BF02 Waiting Area Chairs Perspective View (Multiple).jpg" alt="Seating Pod Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Seating Pod</h4>
+                    <p class="sub-title">Interior Design</p>
+                    <a data-fancybox data-src="#seating-pod"></a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Design Portfolio for Product Design -->
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Electronic products (CAD Application)/Amplifier.png" alt="Electronic Product Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Electronic Product</h4>
+                    <p class="sub-title">CAD Application</p>
+                    <a data-fancybox data-src="#electronic-product"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ Squircle Tray (Woodworking Application)/Woodworking example 3.jpg" alt="Squircle Tray Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Squircle Tray</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#squircle-tray"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ Wooden Drawer (Woodworking Application)/Woodworking example 2.jpg" alt="Wooden Drawer Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Wooden Drawer</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#wooden-drawer"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ Ornament Series (Jewellery Design)/20161122_121044.jpg" alt="Ornament Series Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Ornament Series</h4>
+                    <p class="sub-title">Jewellery Design</p>
+                    <a data-fancybox data-src="#ornament-series"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ Kitchen Timer Prototype (3D Printing)/Kitchen Timer Prototype I 3D Printing a.png" alt="Kitchen Timer Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Kitchen Timer Prototype</h4>
+                    <p class="sub-title">3D Printing</p>
+                    <a data-fancybox data-src="#kitchen-timer"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ Neck and Back Massager Prototype (3D Printing)/Neck and Back Massager Prototype I 3D Printing b.png" alt="Neck & Back Massager Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Neck & Back Massager Prototype</h4>
+                    <p class="sub-title">3D Printing</p>
+                    <a data-fancybox data-src="#neck-back-massager"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ Endcap Prototype (3D Printing)/20170619_105117.jpg" alt="Endcap Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Endcap Prototype</h4>
+                    <p class="sub-title">3D Printing</p>
+                    <a data-fancybox data-src="#endcap-prototype"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/High sitting.jpg" alt="BALANCE Stool Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">BALANCE Stool</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#BALANCE-stool"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Paper Structures/Meeting pod.PNG" alt="Paper Structure Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Paper Structure</h4>
+                    <p class="sub-title">Paper Application</p>
+                    <a data-fancybox data-src="#paper-structure"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 product-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/ReBoard Rocking Horse (Woodworking Application)/Rocking horse v3.PNG" alt="ReBoard Rocking Horse Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">ReBoard Rocking Horse</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#ReBoard-rocking-horse"></a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Design Portfolio for UI / UX -->
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 UI/UX-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 UI/UX-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 UI/UX-design">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Design Portfolio for Visual Communication -->
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 visual-communication">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 visual-communication">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 visual-communication">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 visual-communication">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 visual-communication">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="grid-item col-xs-12 col-sm-12 col-md-4 visual-communication">
+                <figure>
+                  <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="Biomimicry Design Image">
+                  <figcaption class="fig-caption">
+                    <i class="fas fa-search"></i>
+                    <h4 class="title">Biomimicry</h4>
+                    <p class="sub-title">Woodworking Application</p>
+                    <a data-fancybox data-src="#biomimicry"></a>
+                  </figcaption>
+                </figure>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="mh-portfolio-modal" id="mh" style="display: none;">
+    <!-- Design Portfolio for Product Design Individual Window -->
+    <div class="mh-portfolio-modal" id="biomimicry">
       <div class="container">
         <div class="row mh-portfolio-modal-inner">
-          <div class="col-sm-5">
-            <h2>Wrap - A campanion plugin</h2>
-            <p>Wrap is a clean and elegant Multipurpose Landing Page Template.
-              It will fit perfectly for Startup, Web App or any type of Web Services.
-              It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme.
-              All variations are organized separately so you can use / customize the template very easily.</p>
-
-            <p>It is a clean and elegant Multipurpose Landing Page Template.
-              It will fit perfectly for Startup, Web App or any type of Web Services.
-              It has 4 background styles with 6 homepage styles. 6 pre-defined color scheme.
-              All variations are organized separately so you can use / customize the template very easily.</p>
-            <div class="mh-about-tag">
-              <ul>
-                <li><span>php</span></li>
-                <li><span>html</span></li>
-                <li><span>css</span></li>
-                <li><span>php</span></li>
-                <li><span>wordpress</span></li>
-                <li><span>React</span></li>
-                <li><span>Javascript</span></li>
-              </ul>
-            </div>
-            <a href="" class="btn btn-fill">Live Demo</a>
-          </div>
           <div class="col-sm-7">
             <div class="mh-portfolio-modal-img">
-              <img src="assets/images/pr-0.jif" alt="" class="img-fluid">
-              <p>All variations are organized separately so you can use / customize the template very easily.</p>
-              <img src="assets/images/pr-1.jif" alt="" class="img-fluid">
-              <p>All variations are organized separately so you can use / customize the template very easily.</p>
+              <img src="images/Design Portfolio/Product Design/Biomimicry (Woodworking Application)/Woodworking example 1.jpg" alt="" class="img-fluid">
             </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Biomimicry | Woodworking Application</h4>
+            <p>The nose of koala was the inspiration for this piece. Hand carving was the main method used to bring out the concept of imperfection and non-identical concepts in nature. The main function of this piece is to contain small accessories.
+            </p>
           </div>
         </div>
       </div>
     </div>
+    <div class="mh-portfolio-modal" id="electronic-product">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-6">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/Electronic products (CAD Application)/Amplifier.png" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/Electronic products (CAD Application)/Water purifier perspective 2.png" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Electronic products | CAD Application</h4>
+            <p>Practices on 3D modelling and rendering. From a simple design of a Water Purifier to an intricate render of a Sound Amplifier.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="squircle-tray">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/ Squircle Tray (Woodworking Application)/Woodworking example 3.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Squircle Tray | Woodworking Application</h4>
+            <p>The interplay between natural wood grain of the pine panels and rastered acrylic base shows both contrast and harmony between nature and man-made. The squircle on the base acrylic mimics ripples from a point gradually taking the shape
+              of its ‘container’.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="wooden-drawer">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/ Wooden Drawer (Woodworking Application)/Woodworking example 2.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4> Wooden Drawer | Woodworking Application</h4>
+            <p>Different ways of joining wood were explored in the process of making. The purpose of this drawer was to contain art materials hence the compartments are long and deep for objects such as paper, brushes, paint and other stationery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="ornament-series">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-4">
+            <div class="mh-portfolio-modal-group" style="">
+              <img src="images/Design Portfolio/Product Design/ Ornament Series (Jewellery Design)/20161122_121044.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="mh-portfolio-modal-group" style="">
+              <img src="images/Design Portfolio/Product Design/ Ornament Series (Jewellery Design)/20161018_103757.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="mh-portfolio-modal-group" style="">
+              <img src="images/Design Portfolio/Product Design/ Ornament Series (Jewellery Design)/Ornament Series I Jewellery Design a.png" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="mh-portfolio-modal-group" style="">
+              <img src="images/Design Portfolio/Product Design/ Ornament Series (Jewellery Design)/20161216_005225.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Ornament Series | Jewellery Design</h4>
+            <p>This series of jewellery were based on 3 themes. The rings was based on Harry Potter, the brooches were inspired by budding Chrysanthemum flowers while the bracelet shows suggests infinity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="kitchen-timer">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/ Kitchen Timer Prototype (3D Printing)/Kitchen Timer Prototype I 3D Printing a.png" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ Kitchen Timer Prototype (3D Printing)/Kitchen Timer Prototype I 3D Printing b.png" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4> Kitchen Timer Prototype | 3D Printing</h4>
+            <p>This redesign of the kitchen timer aims allow free standing and magnet function. In order to allow better readability of the time when the timer stands on a counter, the LED face is slanted.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="neck-back-massager">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/ Neck and Back Massager Prototype (3D Printing)/Neck and Back Massager Prototype I 3D Printing b.png" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ Neck and Back Massager Prototype (3D Printing)/Neck and Back Massager Prototype I 3D Printing a.png" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ Neck and Back Massager Prototype (3D Printing)/20170420_091553.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Neck and Back Massager Prototype | 3D Printing</h4>
+            <p>This redesign was inspired by the comfort of a teddy bear. Hence the shape of the remote resembles the paw of a bear. Human anatomy was also a crucial design factor as the massager have to conform to the human body for maximum comfort.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="endcap-prototype">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/ Endcap Prototype (3D Printing)/20170609_090442.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ Endcap Prototype (3D Printing)/20170619_105117.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ Endcap Prototype (3D Printing)/20170619_105157.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ Endcap Prototype (3D Printing)/20170619_105210.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4> Endcap Prototype | 3D Printing</h4>
+            <p>Exploration of shapes for that provides structural support and modular installation. This product was design with mass manufacturing in mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="BALANCE-stool">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/Final Year Project - BALANCE Stool I Woodworking Application c.png" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/High sitting.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/IMG_20180424_104214.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/IMG_20180427_141704.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/IMG_20180507_170005.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/IMG_20180511_122634.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/IMG_20180511_123859.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/BALANCE Stool (Woodworking Application)/low sitting.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>BALANCE Stool | Woodworking Application</h4>
+            <p>We lead an increasingly sedentary lifestyle and we tend to spend more time sitting than people in the past. The BALANCE Stool aims to introduce bearable discomfort when our body balance on it to create awareness of one’s sitting posture. Balancing also brings about movement, preventing muscle strain from sitting. This stool also allows user to opt for crossed leg sitting posture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="paper-structure">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/Paper Structures/Meeting pod.PNG" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/Paper Structures/IMG_20201106_121535.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Paper Structure</h4>
+            <p>Description ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="ReBoard-rocking-horse">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Product Design/ReBoard Rocking Horse (Woodworking Application)/IMG_20201006_132507.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ReBoard Rocking Horse (Woodworking Application)/IMG_20201016_174840.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Product Design/ReBoard Rocking Horse (Woodworking Application)/Rocking horse v3.PNG" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>ReBoard Rocking Horse | Woodworking Application</h4>
+            <p>Description
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design Portfolio for Interior Design Individual Window -->
+    <div class="mh-portfolio-modal" id="reception-counter">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/BF01 Reception Counter Internal 2.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/BF01 Reception Counter Internal Raised up.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/BF01 Reception Counter Perspective Front.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/IMG_20211124_112706.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/IMG_20211124_112843.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/IMG-20211028-WA0010.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Reception Counter/Plan view.png" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Reception Counter | Interior Design</h4>
+            <p>Description ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="seating-pod">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Interior Design/Seating Pod/BF02 Waiting Area Chair Front View.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Seating Pod/BF02 Waiting Area Chair Top View.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Seating Pod/BF02 Waiting Area Chairs Perspective View (Left).jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Seating Pod/BF02 Waiting Area Chairs Perspective View (Multiple).jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Seating Pod/Colour stamp.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/Seating Pod/Headrest metal support perspective.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>Seating Pod | Interior Design</h4>
+            <p>Description ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-portfolio-modal" id="the-hidden-door">
+      <div class="container">
+        <div class="row mh-portfolio-modal-inner">
+          <div class="col-sm-7">
+            <div class="mh-portfolio-modal-img">
+              <img src="images/Design Portfolio/Interior Design/The Hidden Door/Aluminium frame door.PNG" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/The Hidden Door/Bookshelf door.gif" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/The Hidden Door/Front view.PNG" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/The Hidden Door/Space Tower + Microwave & Oven Cbt + Top Hung Cbt (86SR_16-01) Internal.JPG" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/The Hidden Door/Study Room 2 Bookshelf w Door (86SR_18-08) Concealed Door Open.jpg" alt="" class="img-fluid">
+              <img src="images/Design Portfolio/Interior Design/The Hidden Door/Top View.PNG" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4>The Hidden Door | Interior Design</h4>
+            <p>Description ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design Portfolio for UI / UX Individual Window -->
+
+
+    <!-- Design Portfolio for Visual Communication Individual Window -->
+
+
   </section>
 
   <section id="work-experience">
@@ -396,7 +892,7 @@
         </ul>
       </div>
       <div class="footer-copyright">
-        <p>© 2021 Hin Wai Fong. All rights reserved.</p>
+        <p>© 2021 - 2022 Hin Wai Fong. All rights reserved.</p>
       </div>
     </div>
   </section>
