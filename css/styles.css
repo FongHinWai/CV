@@ -237,15 +237,12 @@ p {
   box-shadow: none;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+  color: #45b29a;
 }
 
 .key-skill-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 17px rgb(0 0 0 / 12%);
-}
-
-.key-skill-item {
-  color: #45b29a;
 }
 
 .software-proficiency-list {
@@ -660,6 +657,42 @@ ul.timeline>li:before {
 
 .timeline li p {
   margin: 0;
+}
+
+/* contact me */
+#contact-me {
+  padding: 3% 5%;
+}
+
+.contact-me-item {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 90%;
+  display: block;
+  margin: 0 0 15px;
+  background: #fff;
+  padding: 25px 10px 15px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: none;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  color: #45b29a;
+}
+
+.contact-me-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 17px rgb(0 0 0 / 12%);
+}
+
+.contact-me-item h4 {
+  text-align: center;
+}
+
+.contact-me-item a {
+  color: #666;
+  text-decoration: underline;
 }
 
 /* footer */
