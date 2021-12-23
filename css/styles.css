@@ -350,7 +350,6 @@ p {
 
 .mh-portfolio-modal {
   display: none;
-  background: #282828;
 }
 
 .mh-portfolio-modal-inner {
@@ -384,9 +383,21 @@ p {
   margin-bottom: 20px;
 }
 
-.mh-portfolio-modal-group img {
+.mh-portfolio-modal-group-a img {
   margin-bottom: 20px;
-  height: 30%;
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.mh-portfolio-modal-group-b {
+  margin-top: 20px;
+}
+
+.mh-portfolio-modal-group-b img {
+  width: 30%;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .mix {
