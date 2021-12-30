@@ -49,7 +49,7 @@ h2:after {
   position: absolute;
   content: '';
   width: 30px;
-  background-color: #54ca95;
+  background-color: #76CBF0;
   height: 2px;
   bottom: 0;
 }
@@ -193,12 +193,12 @@ p {
 }
 
 .btn-primary {
-  border-color: #54ca95;
+  border-color: #76CBF0;
 }
 
 .btn-primary:hover {
-  background-color: #54ca95;
-  border-color: #54ca95;
+  background-color: #76CBF0;
+  border-color: #76CBF0;
 }
 
 .btn-secondary {
@@ -237,7 +237,7 @@ p {
   box-shadow: none;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  color: #45b29a;
+  color: #76CBF0;
 }
 
 .key-skill-item:hover {
@@ -329,11 +329,11 @@ p {
 }
 
 .portfolio-nav ul li:hover {
-  color: #0bceaf;
+  color: #76CBF0;
 }
 
 .portfolio-nav ul li.active {
-  color: #0bceaf;
+  color: #76CBF0;
 }
 
 .portfolio-nav ul li span {
@@ -342,7 +342,7 @@ p {
 }
 
 .portfolio-nav ul li.current span {
-  border-bottom: 2px solid #0bceaf;
+  border-bottom: 2px solid #76CBF0;
 }
 
 .mh-portfolio-modal {
@@ -539,7 +539,7 @@ p {
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(11, 206, 175, 0.9);
+  background: #76CBF0;
 }
 
 .mh-project-gallery .grid-item figure:hover figcaption:after {
@@ -639,7 +639,7 @@ ul.timeline>li:before {
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #45b29a;
+  border: 3px solid #76CBF0;
   left: 20px;
   width: 20px;
   height: 20px;
@@ -678,7 +678,7 @@ ul.timeline>li:before {
   box-shadow: none;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  color: #45b29a;
+  color: #76CBF0;
 }
 
 .contact-me-item:hover {
